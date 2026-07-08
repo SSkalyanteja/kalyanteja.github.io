@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siddiraju Sai Kalyan Teja | Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        mono: ['Fira Code', 'monospace'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        cyberDark: '#040712',
+                        cyberLime: '#00FF66',
+                        cyberCyan: '#00F0FF',
+                        cyberGlass: 'rgba(8, 14, 28, 0.85)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #040712;
+            color: #E2E8F0;
+            position: relative;
+            min-height: 100vh;
+        }
+        
+        /* High-Intensity Cybernetic Glowing Background */
+        .cyber-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            background: 
+                radial-gradient(circle at 10% 20%, rgba(0, 255, 102, 0.12) 0px, transparent 40%),
+                radial-gradient(circle at 90% 15%, rgba(0, 240, 255, 0.15) 0px, transparent 45%),
+                radial-gradient(circle at 40% 80%, rgba(139, 92, 246, 0.08) 0px, transparent 50%);
+            background-size: cover;
+        }
+
+        /* High-Visibility Tactical Grid Overlay */
+        .cyber-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-size: 50px 50px;
+            background-image: 
+                linear-gradient(to right, rgba(0, 240, 255, 0.04) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 240, 255, 0.04) 1px, transparent 1px);
+            mask-image: radial-gradient(ellipse at 50% 50%, black 60%, transparent 95%);
+            -webkit-mask-image: radial-gradient(ellipse at 50% 50%, black 60%, transparent 95%);
+        }
+
+        /* Animated Laser Scanner Line */
+        .cyber-grid::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(to right, transparent, rgba(0, 255, 102, 0.3), transparent);
+            animation: scan 8s linear infinite;
+            filter: blur(2px);
+        }
+
+        @keyframes scan {
+            0% { top: 0%; }
+            100% { top: 100%; }
+        }
+
+        .glow-border:hover {
+            box-shadow: 0 0 20px rgba(0, 255, 102, 0.3);
+            border-color: #00FF66;
+        }
+        .glow-text {
+            text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+        }
+        
+        /* Custom Scrollbar Styling */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #040712; }
+        ::-webkit-scrollbar-thumb { background: #1E293B; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #00FF66; }
+    </style>
+</head>
+<body class="font-sans antialiased overflow-x-hidden">
+
+    <!-- Background Engine Triggers -->
+    <div class="cyber-bg"></div>
+    <div class="cyber-grid"></div>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-cyberDark/80 backdrop-blur-lg border-b border-slate-800/60">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="font-mono text-sm tracking-wider text-cyberLime font-bold">
+                &lt;SSKT/&gt;
+            </div>
+            <nav class="hidden md:flex space-x-8 font-mono text-xs uppercase tracking-widest text-slate-400">
+                <a href="#about" class="hover:text-cyberLime transition-colors">Dashboard</a>
+                <a href="#metrics" class="hover:text-cyberLime transition-colors">Metrics</a>
+                <a href="#projects" class="hover:text-cyberLime transition-colors">Operations</a>
+                <a href="#freelance" class="hover:text-cyberLime transition-colors">Services</a>
+            </nav>
+            <div>
+                <a href="#contact" class="font-mono text-xs px-4 py-2 border border-cyberCyan text-cyberCyan hover:bg-cyberCyan/10 transition-all rounded">
+                    INITIATE_CONTACT
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="about" class="pt-36 pb-20 min-h-screen flex items-center max-w-5xl mx-auto px-6 relative">
+        <div class="space-y-6 w-full relative z-10">
+            <div class="font-mono text-xs text-cyberLime uppercase tracking-widest bg-cyberLime/10 px-3 py-1 rounded inline-block max-w-max border border-cyberLime/20">
+                [ SYSTEM STATUS: OPERATIONAL ]
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-white leading-tight">
+                Kalyan Teja Siddiraju
+            </h1>
+            
+            <h2 class="text-xl md:text-2xl font-mono text-cyberCyan font-semibold mb-6 glow-text">
+                &gt; <span>Identity, Infrastructure & Automation Engineer</span><span class="animate-pulse">_</span>
+            </h2>
+            
+            <p class="text-slate-400 text-base leading-relaxed max-w-2xl">
+                Specialized in executing zero-trust workflows, cloud tenant security orchestration, and technical automation. Delivering mission-critical IT infrastructure integrity within high-stakes enterprise environments.
+            </p>
+
+            <!-- Live Terminal Component -->
+            <div class="bg-cyberGlass border border-slate-800 rounded-lg shadow-2xl overflow-hidden font-mono text-xs w-full max-w-3xl backdrop-blur-md">
+                <div class="bg-slate-900/60 px-4 py-2 border-b border-slate-800/60 flex items-center space-x-2">
+                    <div class="w-2.5 h-2.5 rounded-full bg-red-500"></div>
+                    <div class="w-2.5 h-2.5 rounded-full bg-yellow-500"></div>
+                    <div class="w-2.5 h-2.5 rounded-full bg-green-500"></div>
+                    <span class="text-[10px] text-slate-500 ml-2">environment_logs.sh</span>
+                </div>
+                <div class="p-5 space-y-3 text-slate-300">
+                    <p class="text-slate-500"><span class="text-cyberLime">❯</span> current_role</p>
+                    <p class="text-white">Infrastructure Engineer (External Vendor Operations for Tier-1 Tech Giant)</p>
+                    <p class="text-slate-500"><span class="text-cyberLime">❯</span> pipeline_efficiency</p>
+                    <p class="text-cyberCyan">60% administrative overhead reduction achieved via Python reporting automation.</p>
+                </div>
+            </div>
+
+            <!-- BUTTON MODULE GRID -->
+            <div class="flex flex-wrap gap-4 pt-4">
+                <a href="mailto:sskalyanteja@gmail.com" class="font-mono text-sm bg-cyberLime text-cyberDark font-bold px-6 py-3 rounded hover:bg-transparent hover:text-cyberLime hover:border-cyberLime border border-transparent transition-all shadow-[0_0_15px_rgba(0,255,102,0.2)]">
+                    [ SECURE_DEPLOYMENT_TALK ]
+                </a>
+                <a href="https://linkedin.com/in/kalyanteja" target="_blank" class="font-mono text-sm border border-cyberCyan text-cyberCyan px-6 py-3 rounded hover:bg-cyberCyan/10 transition-all tracking-wider shadow-[0_0_15px_rgba(0,240,255,0.1)]">
+                    // ACCESS_LINKEDIN_DOSSIER
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIVE METRICS TICKER -->
+    <section id="metrics" class="bg-slate-900/40 backdrop-blur-sm border-y border-slate-800/50 py-6 overflow-hidden">
+        <div class="flex space-x-12 animate-[marquee_25s_linear_infinite] whitespace-nowrap font-mono text-xs uppercase tracking-widest text-slate-400">
+            <span>⚡ RESOLUTION RATE: <strong class="text-cyberLime">95%+</strong></span>
+            <span>⚡ ADMINISTRATIVE TIME ELIMINATED: <strong class="text-cyberCyan">60%</strong></span>
+            <span>⚡ SLA TRACKING TRANSPARENCY: <strong class="text-cyberLime">+40%</strong></span>
+            <span>⚡ RECOGNITION: <strong class="text-yellow-400">EMPLOYEE OF THE MONTH</strong></span>
+            <span>⚡ CORE STACK: <strong class="text-white">PYTHON / SC-300 / JAVASCRIPT</strong></span>
+            <!-- Loop Duplicates -->
+            <span>⚡ RESOLUTION RATE: <strong class="text-cyberLime">95%+</strong></span>
+            <span>⚡ ADMINISTRATIVE TIME ELIMINATED: <strong class="text-cyberCyan">60%</strong></span>
+            <span>⚡ SLA TRACKING TRANSPARENCY: <strong class="text-cyberLime">+40%</strong></span>
+        </div>
+    </section>
+
+    <!-- SKILLS MATRIX -->
+    <section class="py-24 max-w-7xl mx-auto px-6">
+        <h3 class="font-mono text-xs text-cyberCyan uppercase tracking-widest mb-2">[ CAPABILITY MATRIX ]</h3>
+        <h2 class="text-3xl font-bold mb-12 text-white">Technical Architecture</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-cyberGlass border border-slate-800/60 p-6 rounded-lg backdrop-blur-md">
+                <div class="text-cyberLime font-mono text-sm mb-4">[01] IAM & Cloud Infrastructure</div>
+                <ul class="space-y-2 text-sm text-slate-400 font-mono">
+                    <li>- Identity & Access Management</li>
+                    <li>- Custom Tenant Environments</li>
+                    <li>- Security Policy Configurations</li>
+                    <li>- Microsoft SC-300 / MS-102 Path</li>
+                </ul>
+            </div>
+            <div class="bg-cyberGlass border border-slate-800/60 p-6 rounded-lg backdrop-blur-md">
+                <div class="text-cyberCyan font-mono text-sm mb-4">[02] Automation & Data Pipeline</div>
+                <ul class="space-y-2 text-sm text-slate-400 font-mono">
+                    <li>- Python (Pandas, Openpyxl)</li>
+                    <li>- Automated Reporting Engines</li>
+                    <li>- KPI Trend Dashboarding</li>
+                    <li>- Tableau & Power BI Architecture</li>
+                </ul>
+            </div>
+            <div class="bg-cyberGlass border border-slate-800/60 p-6 rounded-lg backdrop-blur-md">
+                <div class="text-purple-400 font-mono text-sm mb-4">[03] Custom Web Engine Tools</div>
+                <ul class="space-y-2 text-sm text-slate-400 font-mono">
+                    <li>- Native JavaScript / UI Design</li>
+                    <li>- Chrome Browser Extensions</li>
+                    <li>- HTML5 / CSS3 / Grid Ecosystems</li>
+                    <li>- Script Filtering Integrations</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- OPERATIONS & PROJECTS -->
+    <section id="projects" class="py-24 bg-slate-900/10 border-t border-slate-800/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <h3 class="font-mono text-xs text-cyberLime uppercase tracking-widest mb-2">[ PRODUCTION RELEASES ]</h3>
+            <h2 class="text-3xl font-bold mb-12 text-white">Engineered Systems & Deployments</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-cyberGlass border border-slate-800/60 p-6 rounded-lg transition-all border-l-4 border-l-cyberLime glow-border backdrop-blur-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h4 class="text-xl font-bold text-white">FlexiAdBlocker Extension</h4>
+                        <span class="font-mono text-xs bg-cyberLime/10 text-cyberLime px-2 py-1 rounded">Live Extension</span>
+                    </div>
+                    <p class="text-sm text-slate-400 mb-4">
+                        Designed and deployed a clean architecture Chrome browser extension to filter intrusive script ad-networks.
+                    </p>
+                    <div class="font-mono text-xs text-slate-500 mb-6">Stack: JavaScript / HTML / CSS</div>
+                    <a href="https://flexiadblocker.github.io" target="_blank" class="font-mono text-xs text-cyberLime hover:underline">&gt; Access live_deployment_hub</a>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-cyberGlass border border-slate-800/60 p-6 rounded-lg transition-all border-l-4 border-l-cyberCyan glow-border backdrop-blur-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h4 class="text-xl font-bold text-white">Automated High-Frequency Report Engine</h4>
+                        <span class="font-mono text-xs bg-cyberCyan/10 text-cyberCyan px-2 py-1 rounded">Automation Pipeline</span>
+                    </div>
+                    <p class="text-sm text-slate-400 mb-4">
+                        Programmed automated high-frequency ticket data pipelines using Python, stripping out manual administrative processing workflows by 60%.
+                    </p>
+                    <div class="font-mono text-xs text-slate-500 mb-6">Stack: Python / Pandas / Openpyxl</div>
+                    <span class="font-mono text-xs text-cyberCyan">[ System Optimization Complete ]</span>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-cyberGlass border border-slate-800/60 p-6 rounded-lg transition-all border-l-4 border-slate-700 glow-border backdrop-blur-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h4 class="text-xl font-bold text-white">Ticket Trend & SLA Dashboard</h4>
+                        <span class="font-mono text-xs bg-slate-800 text-slate-400 px-2 py-1 rounded">Analytics UI</span>
+                    </div>
+                    <p class="text-sm text-slate-400 mb-4">
+                        Engineered KPI-driven dashboards to monitor ticket compliance trends, immediately improving internal SLA target visibility metrics by 40%.
+                    </p>
+                    <div class="font-mono text-xs text-slate-500 mb-6">Stack: Power BI / Excel / Google Sheets</div>
+                    <span class="font-mono text-xs text-slate-400">[ Operational Visibility Implemented ]</span>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="bg-cyberGlass border border-slate-800/60 p-6 rounded-lg transition-all border-l-4 border-slate-700 glow-border backdrop-blur-md">
+                    <div class="flex justify-between items-start mb-4">
+                        <h4 class="text-xl font-bold text-white">Customer Feedback Sentiment Analysis</h4>
+                        <span class="font-mono text-xs bg-slate-800 text-slate-400 px-2 py-1 rounded">Data Forensics</span>
+                    </div>
+                    <p class="text-sm text-slate-400 mb-4">
+                        Processed structural customer review datasets, deploying a drill-down dashboard built with complex DAX measures for core analytical business insights.
+                    </p>
+                    <div class="font-mono text-xs text-slate-500 mb-6">Stack: Excel / Power BI / DAX</div>
+                    <span class="font-mono text-xs text-slate-400">[ Structural CX Mapping Ready ]</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FREELANCE SERVICES -->
+    <section id="freelance" class="py-24 max-w-7xl mx-auto px-6">
+        <h3 class="font-mono text-xs text-purple-400 uppercase tracking-widest mb-2">[ VALUE EXTRACTION CORES ]</h3>
+        <h2 class="text-3xl font-bold mb-4 text-white">On-Demand Freelancing Channels</h2>
+        <p class="text-slate-400 max-w-2xl text-sm mb-12">
+            Leverage my enterprise infrastructure background to harden, automate, and optimize your business ecosystems. Available for tailored, highly strategic contracts.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Service 1 -->
+            <div class="bg-gradient-to-br from-slate-900/50 to-cyberDark border border-slate-800/80 p-8 rounded-xl relative overflow-hidden group backdrop-blur-md">
+                <div class="absolute top-0 right-0 p-4 font-mono text-4xl text-slate-800/20 group-hover:text-cyberLime/10 transition-colors font-bold">01</div>
+                <h4 class="text-xl font-bold text-white mb-2 flex items-center">
+                    <span class="w-2 h-2 bg-cyberLime rounded-full mr-2"></span> Custom Browser Extension Architectures
+                </h4>
+                <p class="text-sm text-slate-400 mb-6">
+                    Need to automate web applications, filter tracking elements, or streamline custom workflows directly inside the browser? I build customized Chrome and Chromium extensions designed for operational workflow compression.
+                </p>
+                <div class="border-t border-slate-800/40 pt-4 flex justify-between text-xs font-mono text-slate-500">
+                    <span>Target: Startups / Lead Gen Teams</span>
+                    <span class="text-cyberLime">Status: Accepting Contracts</span>
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="bg-gradient-to-br from-slate-900/50 to-cyberDark border border-slate-800/80 p-8 rounded-xl relative overflow-hidden group backdrop-blur-md">
+                <div class="absolute top-0 right-0 p-4 font-mono text-4xl text-slate-800/20 group-hover:text-cyberCyan/10 transition-colors font-bold">02</div>
+                <h4 class="text-xl font-bold text-white mb-2 flex items-center">
+                    <span class="w-2 h-2 bg-cyberCyan rounded-full mr-2"></span> Python Data Pipelines & Report Automation
+                </h4>
+                <p class="text-sm text-slate-400 mb-6">
+                    Eliminate repetitive spreadsheet calculations. I engineer modular Python script pipelines (`pandas`/`openpyxl`) that automatically pull, parse, clean, and structure thousands of data vectors into beautifully formatted reports.
+                </p>
+                <div class="border-t border-slate-800/40 pt-4 flex justify-between text-xs font-mono text-slate-500">
+                    <span>Target: E-commerce / Analytics Teams</span>
+                    <span class="text-cyberCyan">Status: Accepting Contracts</span>
+                </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="bg-gradient-to-br from-slate-900/50 to-cyberDark border border-slate-800/80 p-8 rounded-xl relative overflow-hidden group backdrop-blur-md">
+                <div class="absolute top-0 right-0 p-4 font-mono text-4xl text-slate-800/20 group-hover:text-purple-400/10 transition-colors font-bold">03</div>
+                <h4 class="text-xl font-bold text-white mb-2 flex items-center">
+                    <span class="w-2 h-2 bg-purple-400 rounded-full mr-2"></span> Cloud Workspace Configuration & IAM Auditing
+                </h4>
+                <p class="text-sm text-slate-400 mb-6">
+                    Bring zero-trust security postures to your growing infrastructure. I audit cloud tenant deployments, build out robust role-based user access topologies, and configure safe user permissions schemas.
+                </p>
+                <div class="border-t border-slate-800/40 pt-4 flex justify-between text-xs font-mono text-slate-500">
+                    <span>Target: Growing SMBs / Remote Orgs</span>
+                    <span class="text-purple-400">Status: Accepting Contracts</span>
+                </div>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="bg-gradient-to-br from-slate-900/50 to-cyberDark border border-slate-800/80 p-8 rounded-xl relative overflow-hidden group backdrop-blur-md">
+                <div class="absolute top-0 right-0 p-4 font-mono text-4xl text-slate-800/20 group-hover:text-yellow-400/10 transition-colors font-bold">04</div>
+                <h4 class="text-xl font-bold text-white mb-2 flex items-center">
+                    <span class="w-2 h-2 bg-yellow-400 rounded-full mr-2"></span> Operational SLA Metrics Dashboard Construction
+                </h4>
+                <p class="text-sm text-slate-400 mb-6">
+                    Turn raw logs into operational transparency. I architect executive KPI-focused data dashboards with clean drill-down insight views built over Power BI, Excel, or real-time connected cloud-sheets ecosystem.
+                </p>
+                <div class="border-t border-slate-800/40 pt-4 flex justify-between text-xs font-mono text-slate-500">
+                    <span>Target: Customer Support / Ops Hubs</span>
+                    <span class="text-yellow-400">Status: Accepting Contracts</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="border-t border-slate-800/50 bg-[#020409] py-12 text-center text-sm font-mono text-slate-500">
+        <div class="max-w-7xl mx-auto px-6 space-y-4">
+            <p>Connect Securely: <a href="mailto:sskalyanteja@gmail.com" class="text-cyberLime hover:underline">sskalyanteja@gmail.com</a></p>
+            <p class="text-xs text-slate-600">// Build Status: Production Stable. Handcrafted via Cyber-Ops Blueprint Layout.</p>
+        </div>
+    </footer>
+
+    <!-- Ticker Animation CSS -->
+    <style>
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+    </style>
+</body>
+</html>
